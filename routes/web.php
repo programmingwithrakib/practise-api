@@ -8,5 +8,12 @@ Route::get('/', function () {
 });
 
 Route::prefix('docs')->group(function () {
-    Route::get('todo', [Docs\TodoController::class, 'index']);
+    Route::prefix('todo')->group(function () {
+        Route::get('get-all', [Docs\TodoController::class, 'index']);
+        Route::get('add-new', [Docs\TodoController::class, 'store']);
+        Route::get('update', [Docs\TodoController::class, 'update']);
+        Route::get('delete', [Docs\TodoController::class, 'delete']);
+        Route::get('show', [Docs\TodoController::class, 'show']);
+    });
+
 });

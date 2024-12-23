@@ -33,4 +33,8 @@ class TodoController extends Controller
         $todo->delete();
         return Helper::ApiResponse('Deleted Successfully', $todo);
     }
+    public function show($id){
+        $todo = Todo::findOrFail($id);
+        return Helper::ApiResponse('Fetch Successfully', $todo);
+    }
 }

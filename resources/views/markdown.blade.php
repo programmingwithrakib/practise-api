@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <title>{{$title ?? 'Document'}}</title>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -125,11 +126,57 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
+        #markdown h2{
+            background: rgba(2, 21, 38, 0.16);
+            /*color: white;*/
+            padding: 10px 10px;
+            border-radius: 5px;
+            line-height: 1.5;
+            word-break: normal;
+            font-size: 18px;
+        }
+
+        #markdown h3{
+            background: #021526;
+            color: white;
+            padding: 10px 10px;
+            border-radius: 5px;
+            line-height: 1.5;
+            word-break: normal;
+            font-size: 16px;
+        }
+
+        #markdown h4{
+            font-weight: bold;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            font-size: 16px;
+            text-decoration-color: #c2b6b6;
+            margin-bottom: 15px;
+        }
+
+        #markdown ul p, #markdown ol p{
+            margin: 0;
+            line-height: 1.5;
+        }
+        #markdown ul li *:last-child, #markdown ol li *:last-child{
+            margin-bottom: 15px;
+        }
+
+
+        #markdown ul, #markdown ol{
+            margin: 10px 0;
+        }
+
+        #markdown ul pre, #markdown ol pre{
+            margin: 10px 0;
+        }
+
     </style>
-    <title>Document</title>
+
 </head>
 <body>
-    <div class="markdown-content">
+    <div id="markdown" class="markdown-content">
         {!! $content !!}
     </div>
 </body>
