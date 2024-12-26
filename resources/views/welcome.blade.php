@@ -19,7 +19,7 @@
         <div class="p-4">
             <div class="row">
                 <div class="col-md-4">
-                    <div style="background-color: #3912f8" class="card text-white">
+                    <div style="background-color: #661bed" class="card text-white">
                         <div class="card-body">
                             <a style="font-size: 36px" class="nav-link" href="{{\App\Utils\Helper::API_URL()}}/docs/todo/get-all">
                                 <i class="bi bi-list-task me-2"></i>
