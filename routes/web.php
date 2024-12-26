@@ -8,6 +8,8 @@ Route::get('/', function () {
 });
 
 Route::prefix('docs')->group(function () {
+
+    Route::get('/test-api', [Docs\TestApiController::class, 'index']);
     Route::prefix('todo')->group(function () {
         Route::get('get-all', [Docs\TodoController::class, 'index']);
         Route::get('add-new', [Docs\TodoController::class, 'store']);

@@ -20,6 +20,12 @@ return Application::configure(basePath: dirname(__DIR__))
                 ->prefix('todo')
                 ->name('todo.')
                 ->group(base_path('routes/todo.php'));
+
+            //Test API Routes
+            Route::middleware('api')
+                ->prefix('test-api')
+                ->name('test-api.')
+                ->group(base_path('routes/test-api.php'));
         }
     )
     ->withMiddleware(function (Middleware $middleware) {
