@@ -36,10 +36,33 @@ class TestAPIController extends Controller
         $header_keys = array_keys($request->header());
         $headers = [];
         foreach ($header_keys as $header_key) {
+            if(!in_array($header_key, [
+                'accept',
+                'accept-encoding',
+                'accept-language',
+                'host', 'referer',
+                'user-agent', 'origin',
+                'sec-fetch-dest',
+                'sec-fetch-mode',
+                'sec-fetch-site',
+                'sec-ch-ua-platform',
+                'sec-ch-ua-ua',
+                'sec-ch-ua-r',
+                'sec-ch-ua-b',
+                'sec-ch-ua',
+                'sec-ch-ua-mobile',
+                'te',
+                'priority',
+                'content-type',
+                'content-length'
+            ]) )
             $headers[$header_key] = $request->header($header_key);
         }
 
-        $data['headers'] = $headers;
+        if ($headers){
+            $data['headers'] = $headers;
+        }
+
 
         // Get Query Parameter Data
         if ($query_data = $request->query()){
