@@ -56,7 +56,7 @@
         .markdown-content blockquote {
             font-style: italic;
             color: #6c757d;
-            border-left: 5px solid #3498db;
+            border-left: 5px solid #3912f8;
             padding-left: 15px;
             margin: 1.5em 0;
             background-color: #f7faff;
@@ -74,28 +74,28 @@
             margin-bottom: 0.5em;
         }
         .markdown-content ul li::marker {
-            color: #3498db;
+            color: #3912f8;
         }
 
         /* Links */
         .markdown-content a {
-            color: #3498db;
+            color: #3912f8;
             text-decoration: none;
-            border-bottom: 1px dashed #3498db;
+            border-bottom: 1px dashed #3912f8;
             transition: all 0.3s ease;
         }
         .markdown-content a:hover {
-            color: #1d6fa5;
-            border-bottom: 1px solid #1d6fa5;
+            color: #3912f8;
+            border-bottom: 1px solid #3912f8;
         }
 
         /* Code Blocks */
 
         .markdown-content p code, .markdown-content tr code, .markdown-content li code{
-            background-color: #f4f4f4;
+            background-color: #dfe3f7;
             padding: 2px 5px;
             border-radius: 4px;
-            color: #e74c3c;
+            color: #3912f8;
         }
 
         /* Tables */
@@ -127,8 +127,8 @@
         }
 
         #markdown h2{
-            background: rgba(2, 21, 38, 0.16);
-            /*color: white;*/
+            background: #3912f81c;
+            color: #3912f8;
             padding: 10px 10px;
             border-radius: 5px;
             line-height: 1.5;
@@ -172,6 +172,9 @@
             margin: 10px 0;
         }
 
+        hr{
+            color: #e7e3fd
+        }
     </style>
 
 </head>
