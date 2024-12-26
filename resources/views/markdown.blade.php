@@ -175,11 +175,36 @@
         hr{
             color: #e7e3fd
         }
+
+        .all-api-btn{
+            padding: 15px 30px;
+            border:none;
+            background-color: #661bed;
+            color: white!important;
+            border-radius: 5px;
+        }
+
+        .all-api-btn:hover{
+            background-color: #4900cc;
+        }
     </style>
 
 </head>
 <body>
     <div id="markdown" class="markdown-content">
+        <div style="display: flex; justify-content: space-between; align-items: center">
+{{--            <img style="height: 50px" src="https://programmingwithrakib.com/assets/images/logo.png">--}}
+            <div>
+                <a href="https://api.programmingwithrakib.com" class="btn all--btn btn-danger">Show All API</a>
+            </div>
+            <div>
+                <a href="https://www.youtube.com/@ProgrammingWithRakib365" class="btn all--btn btn-danger">Show Youtube Chanel</a>
+            </div>
+            <div>
+                <a href="https://programmingwithrakib.com" class="btn all-web-btn btn-danger">View Website</a>
+            </div>
+        </div>
+        <hr>
         {!! $content !!}
     </div>
 </body>
