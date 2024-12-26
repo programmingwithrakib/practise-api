@@ -1,16 +1,21 @@
 # TO DO APP API Documentation
- 
-- [Get All Todo](https://practice-api.sakibul-islam.xyz/docs/todo/get-all)
-- [Add New Todo](https://practice-api.sakibul-islam.xyz/docs/todo/add-new)
-- [Update Todo](https://practice-api.sakibul-islam.xyz/docs/todo/update)
-- [Delete Todo](https://practice-api.sakibul-islam.xyz/docs/todo/delete)
-- [Show Todo](https://practice-api.sakibul-islam.xyz/docs/todo/show)
+
+- [Get All Todo](https://api.programmingwithrakib.com/docs/todo/get-all)
+- [Add New Todo](https://api.programmingwithrakib.com/docs/todo/add-new)
+- [Update Todo](https://api.programmingwithrakib.com/docs/todo/update)
+- [Delete Todo](https://api.programmingwithrakib.com/docs/todo/delete)
+- [Show Todo](https://api.programmingwithrakib.com/docs/todo/show)
 
 ---
 # **Get All Todos**
 
 ## **Endpoint**
-**URL:** `http://practice-api.sakibul-islam.xyz/todo`  
+**BASE URL**: `https://api.programmingwithrakib.com`
+
+**Path**: `/todo`
+
+**Full URL:** `https://api.programmingwithrakib.com/todo`  
+
 **Method:** `GET`
 
 ---
@@ -28,9 +33,8 @@
 ```javascript
 const options = {
   method: 'GET',
-  url: 'http://practice-api.sakibul-islam.xyz/todo',
+  url: 'https://api.programmingwithrakib.com/todo',
   params: { q: '' },
-  headers: { 'User-Agent': 'insomnia/10.3.0' }
 };
 
 axios.request(options)
@@ -67,10 +71,10 @@ axios.request(options)
     ],
     "links": [
       { "url": null, "label": "Previous", "active": false },
-      { "url": "http://practice-api.sakibul-islam.xyz/todo?page=1", "label": "1", "active": true },
-      { "url": "http://practice-api.sakibul-islam.xyz/todo?page=2", "label": "Next", "active": false }
+      { "url": "https://api.programmingwithrakib.com/todo?page=1", "label": "1", "active": true },
+      { "url": "https://api.programmingwithrakib.com/todo?page=2", "label": "Next", "active": false }
     ],
-    "next_page_url": "http://practice-api.sakibul-islam.xyz/todo?page=2",
+    "next_page_url": "https://api.programmingwithrakib.com/todo?page=2",
     "per_page": 5,
     "total": 54
   }

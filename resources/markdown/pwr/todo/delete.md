@@ -1,17 +1,22 @@
 # TO DO APP API Documentation
 
-- [Get All Todo](https://practice-api.sakibul-islam.xyz/docs/todo/get-all)
-- [Add New Todo](https://practice-api.sakibul-islam.xyz/docs/todo/add-new)
-- [Update Todo](https://practice-api.sakibul-islam.xyz/docs/todo/update)
-- [Delete Todo](https://practice-api.sakibul-islam.xyz/docs/todo/delete)
-- [Show Todo](https://practice-api.sakibul-islam.xyz/docs/todo/show)
+- [Get All Todo](https://api.programmingwithrakib.com/docs/todo/get-all)
+- [Add New Todo](https://api.programmingwithrakib.com/docs/todo/add-new)
+- [Update Todo](https://api.programmingwithrakib.com/docs/todo/update)
+- [Delete Todo](https://api.programmingwithrakib.com/docs/todo/delete)
+- [Show Todo](https://api.programmingwithrakib.com/docs/todo/show)
 
 ---
 
 # **Delete a Todo**
 
 ## **Endpoint**
-**URL:** `http://practice-api.sakibul-islam.xyz/todo/delete/<id>`  
+**BASE URL**: `https://api.programmingwithrakib.com`
+
+**Path**: `/todo/delete/<id>`
+
+**Full URL:** `https://api.programmingwithrakib.com/todo/delete/<id>`  
+
 **Method:** `POST`
 
 ---
@@ -29,7 +34,7 @@
 ```javascript
 const options = {
   method: 'POST',
-  url: 'http://practice-api.sakibul-islam.xyz/todo/delete/52',
+  url: 'https://api.programmingwithrakib.com/todo/delete/52',
 };
 
 axios.request(options)
