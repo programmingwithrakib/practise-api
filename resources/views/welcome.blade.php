@@ -21,7 +21,7 @@
                 <div class="col-md-4">
                     <div class="card bg-dark text-white">
                         <div class="card-body">
-                            <a style="font-size: 36px" class="nav-link" href="https://practice-api.sakibul-islam.xyz/docs/todo/get-all">
+                            <a style="font-size: 36px" class="nav-link" href="{{\App\Utils\Helper::API_URL()}}/docs/todo/get-all">
                                 <i class="bi bi-list-task me-2"></i>
                                 Todo API Docs
                             </a>

@@ -57,7 +57,13 @@ class Helper
 
     static public function ReadMarkdownFile($path)
     {
-        $markdownFile = resource_path('markdown/'.$path);
+        if(env("APP_FOR") == "pwr"){
+            $path = 'markdown/pwr/'.$path;
+        }
+        else{
+            $path = 'markdown/'.$path;
+        }
+        $markdownFile = resource_path($path);
         // Check if the file exists
         if (!file_exists($markdownFile)) {
             abort(404, 'Markdown file not found');
@@ -65,5 +71,15 @@ class Helper
 
         // Read the content of the .md file
         return $markdownContent = file_get_contents($markdownFile);
+    }
+
+    static public function API_URL()
+    {
+        if(env("APP_FOR") == "pwr"){
+            return 'https://api.programmingwithrakib.com';
+        }
+        else{
+            return 'https://practice-api.sakibul-islam.xyz';
+        }
     }
 }

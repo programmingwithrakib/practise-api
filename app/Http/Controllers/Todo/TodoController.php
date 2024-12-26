@@ -11,7 +11,7 @@ use App\Utils\Helper;
 class TodoController extends Controller
 {
     public function index(){
-        $data = Todo::select('id', 'title', 'description', 'completed')->customPaginate(5);
+        $data = Todo::select('id', 'title', 'description', 'completed')->orderBy('id', 'desc')->customPaginate(5);
         return Helper::ApiResponse('Fetch Successfully', $data);
     }
 
